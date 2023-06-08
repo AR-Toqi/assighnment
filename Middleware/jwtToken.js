@@ -7,7 +7,11 @@ const secretKey= "toqi1234";
 
 function generateToken(userId, secretKey) {
 
-  const token = jwt.sign(userId, secretKey,);
+  const token = jwt.sign(userId, secretKey,{
+
+    expiresIn: '24h' // expires in 24 hours
+
+     });
   return token;
 }
 generateToken(userId, secretKey);
